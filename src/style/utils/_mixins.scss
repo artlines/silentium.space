@@ -1,0 +1,21 @@
+
+@mixin background-color($key){
+	background-color: background-color($key);
+}
+
+@mixin font-size($key){
+	font-size: font-size($key);
+}
+
+@mixin color($key){
+	color: color($key);
+}
+
+@mixin transition($key){
+	transition: all $key ease-in-out;
+}
+@mixin placeholder($selector, $color) {
+  #{$selector}::-webkit-input-placeholder {color: $color}
+  #{$selector}::-moz-placeholder          {color: $color}
+  #{$selector}:-ms-input-placeholder      {color: $color}
+}

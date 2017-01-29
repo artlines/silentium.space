@@ -1,0 +1,22 @@
+{
+  "name": "selentium.space",
+  "version": "",
+  "description": "",
+  "repository": {
+    "type": "git",
+    "url": ""
+  },
+  "dependencies": {
+    "browser-sync": "latest",
+    "gulp": "latest",
+    "gulp-autoprefixer": "latest",
+    "gulp-clean-css": "latest",
+    "gulp-imagemin": "latest",
+    "gulp-include": "latest",
+    "gulp-rigger": "latest",
+    "gulp-sass": "latest",
+    "gulp-uglify": "latest",
+    "gulp-watch": "latest",
+    "rimraf": "latest"
+  }
+}
