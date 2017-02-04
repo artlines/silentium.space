@@ -22,22 +22,18 @@
         phi = 0, theta = 0;
 
     var r = "../img/";
+
     var urls = [
-        r + "_r.jpg", r + "_l.jpg",
-        r + "_u.jpg", r + "_d.jpg",
-        r + "_f.jpg", r + "_b.jpg"
+        r + "cube_1.jpg", r + "cube_3.jpg",
+        r + "cube_4.jpg", r + "cube_5.jpg",
+        r + "cube_0.jpg", r + "cube_2.jpg",
     ];
-/*        var urls = [
-        r + "Ocean_from_horn__cube_1.jpg", r + "Ocean_from_horn__cube_3.jpg",
-        r + "Ocean_from_horn__cube_4.jpg", r + "Ocean_from_horn__cube_5.jpg",
-        r + "Ocean_from_horn__cube_0.jpg", r + "Ocean_from_horn__cube_2.jpg",
-    ];*/
 
     textureCube = new THREE.CubeTextureLoader().load(urls);
 
     var textureLoader = new THREE.TextureLoader();
 
-    textureLoader.load('../img/Ocean_from_horn_.jpg', function () {
+    textureLoader.load('../img/Ocean.jpg', function () {
         init();
         animate();
     });
@@ -149,7 +145,7 @@
         // TEXT
 
         var loader = new THREE.FontLoader();
-        loader.load('../fonts/Politica_Bold.json', function (font) {
+        loader.load('../fonts/Source Sans Pro_Regular.json', function (font) {
 
             var textGeo = new THREE.TextGeometry("ТИШИНА", {
                 font: font,

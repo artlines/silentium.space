@@ -18,5 +18,7 @@
     "gulp-uglify": "latest",
     "gulp-watch": "latest",
     "rimraf": "latest"
+  },
+  "devDependencies": {
   }
 }

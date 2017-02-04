@@ -13,6 +13,7 @@
   "dependencies": {
     "normalize.css": "*",
     "jquery": "2.*",
-    "material-design-lite": ">=1.3.0"
+    "material-design-lite": ">=1.3.0",
+    "lato-font-face": "^1.0.3"
   }
 }

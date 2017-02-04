@@ -10,7 +10,7 @@ var gulp = require('gulp'),
     cssmin = require('gulp-clean-css'),
     imagemin = require('gulp-imagemin'),
     rimraf = require('rimraf'),
-    browserSync = require("browser-sync"),
+    browserSync = require("browser-sync"), 
     reload = browserSync.reload;
 
 var path = {
@@ -57,14 +57,14 @@ gulp.task('clean', function (cb) {
 });
 
 gulp.task('html:build', function () {
-    gulp.src(path.src.html) 
+    return gulp.src(path.src.html) 
         .pipe(rigger())
         .pipe(gulp.dest(path.build.html))
         .pipe(reload({stream: true}));
 });
 
 gulp.task('js:build', function () {
-    gulp.src(path.src.js) 
+    return gulp.src(path.src.js) 
         .pipe(include()) 
         .pipe(uglify()) 
         .pipe(gulp.dest(path.build.js))
@@ -72,7 +72,7 @@ gulp.task('js:build', function () {
 });
 
 gulp.task('style:build', function () {
-    gulp.src(path.src.style) 
+    return gulp.src(path.src.style) 
         .pipe(sass({
             includePaths: ['src/style/'],
             outputStyle: 'compressed',
@@ -86,7 +86,7 @@ gulp.task('style:build', function () {
 });
 
 gulp.task('image:build', function () {
-    gulp.src(path.src.img) 
+    return gulp.src(path.src.img) 
         .pipe(imagemin({
             progressive: true,
             svgoPlugins: [{removeViewBox: false}],
@@ -97,8 +97,8 @@ gulp.task('image:build', function () {
 });
 
 gulp.task('fonts:build', function() {
-    gulp.src(path.src.fonts)
-        .pipe(gulp.dest(path.build.fonts))
+    return gulp.src(path.src.fonts)
+        .pipe(gulp.dest(path.build.fonts));
 });
 
 gulp.task('build', [
